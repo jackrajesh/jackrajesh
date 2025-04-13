@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // Basic mobile detection
+        const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      
+        if (isMobile) {
+          // Try to override viewport (not guaranteed)
+          const meta = document.querySelector('meta[name="viewport"]');
+          if (meta) {
+            meta.setAttribute('content', 'width=1024');
+          } else {
+            const newMeta = document.createElement('meta');
+            newMeta.name = 'viewport';
+            newMeta.content = 'width=1024';
+            document.head.appendChild(newMeta);
+          }
+      
+          // Optional: force landscape
+          screen.orientation?.lock?.("landscape").catch(() => {});
+        }
+      </script>
+      
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="sty.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+<nav class="nav">
+<div class="navdiv">
+    <p class="p"><b class="logo">JackRajesh </b></p>
+    <div class="btdiv">
+        <a class="bt" href="index.html">Home</a>
+        <a class="bt" href="skills.htm">Skills</a>
+        <a class="bt" href="contact.htm">Contact</a>
+        <a class="bt" href="about.htm">About</a>
+
+    </div>
+</div>
+</nav>
+<div class="cb">
+    <h2 class="contact">Contact</h2>
+    <hr>
+    <h2>Mail : shanmugam10052966@gmail.com <i class='bx bxs-envelope'></i></h2>
+    <br>
+    <h2>Number: 6369812### <i class='bx bx-phone'></i></h2>
+    <br>
+    <h2>Discord: rajesh_25234 <i class='bx bxl-discord-alt'></i></h2>
+    <br>
+    <h2>Instagram: rajesh_official_27 <i class='bx bxl-instagram'></i></h2>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // Basic mobile detection
+        const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      
+        if (isMobile) {
+          // Try to override viewport (not guaranteed)
+          const meta = document.querySelector('meta[name="viewport"]');
+          if (meta) {
+            meta.setAttribute('content', 'width=1024');
+          } else {
+            const newMeta = document.createElement('meta');
+            newMeta.name = 'viewport';
+            newMeta.content = 'width=1024';
+            document.head.appendChild(newMeta);
+          }
+      
+          // Optional: force landscape
+          screen.orientation?.lock?.("landscape").catch(() => {});
+        }
+      </script>
+      
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="sty.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .sharingan {
+            opacity: 0;
+            transform: translateY(100px) scale(1); /* Start off-screen at the bottom */
+            width: 150px;
+            transition: 
+                transform 1s ease, 
+                opacity 1s ease, 
+                width 1s ease;
+            display: block;
+            margin: 20px auto;
+            margin-right: 50px;
+            margin-top: -500px;
+        }
+
+        .sharingan.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1.2); /* Move to final position + slight zoom */
+            width: 300px;
+        }
+        body {
+    min-height: 100vh; /* Ensures body covers full height of the viewport */
+    margin: 0;
+    background: linear-gradient(rgb(204, 2, 2), black);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.nav{
+    margin-top: 26px;
+    background:linear-gradient(rgb(255, 84, 84),rgba(0, 0, 0, 0.849));
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: sticky; top: 0;
+    border: none;
+    padding: 10px;
+}
+.bt{
+    padding-top:4px ;
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    margin-left: 80px;
+    margin-right: 10px;
+    text-decoration: none;
+    margin-top: 16px;
+}
+.bt:hover{
+    color: rgb(243, 209, 209);
+    background-color: rgba(14, 13, 13, 0.644);
+    border-radius: 18px;
+    padding-top: 10px;
+}
+.logo{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+}
+    </style>
+</head>
+<body>
+
+<nav class="nav">
+    <div class="navdiv">
+        <p class="p"><b class="logo">JackRajesh </b></p>
+        <div class="btdiv">
+            <a class="bt" href="index.html">Home</a>
+            <a class="bt" href="skills.htm">Skills</a>
+            <a class="bt" href="contact.htm">Contact</a>
+            <a class="bt" href="about.htm">About</a>
+        </div>
+    </div>
+</nav>
+
+<img src="E1dfymwXMAEYITe.png" alt="Madara PNG" class="img">
+<h2 class="slogan" style="color: white;">The Ghost Of The Uchiha.. Madara Uchiha</h2>
+
+<!-- Sharingan image starts hidden -->
+<img class="sharingan" src="Mangekyou_Sharingan_Madara_(Eternal).svg.png" alt="sharingan">
+
+<button id="bton">Activate Sharingan</button>
+
+<script>
+    document.getElementById('bton').addEventListener('click', function () {
+        const sharinganImg = document.querySelector('.sharingan');
+        if (sharinganImg && !sharinganImg.classList.contains('visible')) {
+            sharinganImg.classList.add('visible');
+        }
+    });
+</script>
+
+</body>
+</html>

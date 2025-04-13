@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // Basic mobile detection
+        const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      
+        if (isMobile) {
+          // Try to override viewport (not guaranteed)
+          const meta = document.querySelector('meta[name="viewport"]');
+          if (meta) {
+            meta.setAttribute('content', 'width=1024');
+          } else {
+            const newMeta = document.createElement('meta');
+            newMeta.name = 'viewport';
+            newMeta.content = 'width=1024';
+            document.head.appendChild(newMeta);
+          }
+      
+          // Optional: force landscape
+          screen.orientation?.lock?.("landscape").catch(() => {});
+        }
+      </script>
+      
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link rel="stylesheet" href="sty.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+<nav class="nav">
+<div class="navdiv">
+    <p class="p"><b class="logo">JackRajesh </b></p>
+    <div class="btdiv">
+        <a class="bt" href="index.html">Home</a>
+        <a class="bt" href="skills.htm">Skills</a>
+        <a class="bt" href="contact.htm">Contact</a>
+        <a class="bt" href="about.htm">About</a>
+        
+    </div>
+</div>
+</nav>
+    <p>Hello im <b>JackRajesh</b> this is my own Website it took me 1hour to create. i hope you like this website,</p>
+    <p><b>Skills</b></p>
+    <hr>
+    <p><b>Programming</b></p>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Lua</li>
+        <li>java (Basics)</li>
+    </ul>
+    <hr>
+    <p><b>Modeling</b></p>
+    <ul>
+        <li>Object Creating</li>
+        <li>Low Poly Weapons</li>
+        <li>Detailing</li>
+        <li>Character designing (Progress)</li>
+    </ul>
+    <hr>
+    <p><b>Typing</b></p>
+    <ul>
+        <li>Max WPM (60)</li>
+        <li>Accurate(84%)</li>
+        <li>Speed(80%)</li>
+    </ul>
+    <hr>
+    <p><b>Game Development</b></p>
+    <p><b>Roblox</b></p>
+    <ul>
+        <li>Roblox Game Development</li>
+        <li>Building(Roblox)</li>
+        <li>Atmospher Alteration</li>
+        <li>Scripting</li>
+        <li>Function to OBJECT</li>
+    </ul>
+    <hr>
+    <p><b>Games</b></p>
+    <ul>
+        <li>Roblox</li>
+        <li>Valorant (Discontinued)</li>
+    </ul>
+    <hr>
+    <p><b>Category : Roblox</b></p>
+    <ul>
+        <li>TSB(The Strongest Battle Ground)</li>
+        <li>Blox Fruit</li>
+        <li>Jail Break</li>
+    </ul>
+    <hr>
+    <p><b>Category : Valorant</b></p>
+    <ul>
+        <li>Comp</li>
+        <li>Custom Match</li>
+        <li>DM</li>
+        <li>Unrated</li>
+    </ul>
+</body>
+</html>

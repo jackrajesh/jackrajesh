@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // Basic mobile detection
+        const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      
+        if (isMobile) {
+          // Try to override viewport (not guaranteed)
+          const meta = document.querySelector('meta[name="viewport"]');
+          if (meta) {
+            meta.setAttribute('content', 'width=1024');
+          } else {
+            const newMeta = document.createElement('meta');
+            newMeta.name = 'viewport';
+            newMeta.content = 'width=1024';
+            document.head.appendChild(newMeta);
+          }
+      
+          // Optional: force landscape
+          screen.orientation?.lock?.("landscape").catch(() => {});
+        }
+      </script>
+      
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="sty.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+<nav class="nav">
+<div class="navdiv">
+    <p class="p"><b class="logo">JackRajesh </b></p>
+    <div class="btdiv">
+        <a class="bt" href="index.html">Home</a>
+        <a class="bt" href="skills.htm">Skills</a>
+        <a class="bt" href="contact.htm">Contact</a>
+        <a class="bt" href="about.htm">About</a>
+        
+    </div>
+</div>
+</nav>
+<div class="text">
+    <p class="heading">Welcome to <b>JackRajesh</b> Website <i class='bx bx-laptop'></i></p>
+    <p class="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi in corporis perferendis deleniti reiciendis numquam magnam animi. Vero ducimus et, porro blanditiis laudantium ab alias qui, asperiores culpa rem beatae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nesciunt fugit ad reiciendis. Quaerat ducimus recusandae in, est dolore nisi modi reprehenderit non ea minus, esse quo corporis animi expedita.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non vero deleniti nam aperiam excepturi. Eius temporibus inventore reiciendis sapiente officiis quo nulla est animi eveniet, deleniti sed debitis, blanditiis nemo?</p>
+
+</div>
+</body>
+</html>

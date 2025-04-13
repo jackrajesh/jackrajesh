@@ -1,0 +1,103 @@
+body{
+    font-family: Arial;
+    background-color: #e4edf0;
+}
+.logo{
+    color: rgb(28, 184, 184);
+    font-size: 30px;
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+}
+.nav{
+    margin-top: 26px;
+    background-color: rgb(148, 206, 212);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: sticky; top: 0;
+    border: none;
+    padding: 10px;
+
+}
+
+.bt{
+    padding-top:4px ;
+    background-color: transparent;
+    color: #1492b1;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    margin-left: 80px;
+    margin-right: 10px;
+    text-decoration: none;
+    margin-top: 16px;
+}
+.bt:hover{
+    color: cyan;
+    background-color: rgba(0, 255, 221, 0.144);
+    border-radius: 18px;
+    padding-top: 10px;
+}
+.p{
+    margin: 0;
+    padding: 0;
+
+}
+.btdiv{
+    display: flex;
+
+}
+.navdiv{
+    display: flex;
+    justify-content: space-between;
+}
+.heading{
+    text-align: center;
+    font-weight: 100;
+    font-size:30px;
+
+}
+.para{
+    margin-top: 100px;
+    text-align: center;
+    font-size: 17px;
+    word-spacing: 10px;
+    line-height: 25px;
+    font-style: italic;
+    font-style: oblique;
+}
+p{
+    font-size: 19px;
+}
+.contact{
+    margin-bottom: 60px;
+}
+.cb{
+    text-align: center;
+}
+.img{
+    width: 500px;
+    background:linear-gradient(rgb(153, 0, 0),black);
+    cursor: pointer;
+    border-radius: 30px;
+}
+.slogan{
+    margin-left: 10px;
+    color: rgb(146, 0, 0) ;
+}
+.img:hover{
+    background-image: linear-gradient(rgb(99, 0, 0),black);
+    
+}
+.sharingan{
+    float: right;
+    margin-top: -500px;
+    width: 0px;
+}
+#bton{
+    color: white;
+    background:linear-gradient(rgba(255, 0, 0, 0.692),rgba(0, 0, 0, 0.747));
+    margin-left: 125px;
+    padding: 20px;
+    font-size: 20px;
+}
